@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 
-class ArticleDescriptionPage extends StatelessWidget {
+class CategoriesDetailPage extends StatelessWidget {
   final String title;
   final String description;
   final String imageUrl;
-  final String  articledesc;
 
-  ArticleDescriptionPage({
+  CategoriesDetailPage({
     required this.title,
     required this.description,
     required this.imageUrl,
-    required this.articledesc,
   });
 
   @override
@@ -21,24 +19,23 @@ class ArticleDescriptionPage extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: SingleChildScrollView(
-        child: Column(
-               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Image.asset(
-                imageUrl,
+          child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Image.asset(
+              imageUrl,
               width: MediaQuery.of(context).size.width,
               height: 200,
               fit: BoxFit.cover,
             ),
             const SizedBox(height: 16),
             Text(
-              articledesc,
+              description,
               style: const TextStyle(fontSize: 16),
             ),
           ],
         ),
       ),
-    ),);
+    );
   }
 }

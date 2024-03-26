@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:antiflimflam/components/my_button.dart';
 import 'package:antiflimflam/components/articles.dart';
+import 'package:antiflimflam/components/categories.dart';
 import 'feedback.dart';
 
 class Dashboard extends StatelessWidget {
@@ -63,7 +64,7 @@ class Dashboard extends StatelessWidget {
                           Navigator.push(context, MaterialPageRoute(builder: (context) => ArticleComponent()));
                         } else if (items[index] == 'CyberAttack Categories') {
                           // Navigate to the CyberAttack Categories page
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => ArticleComponent()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => Categories()));
                         }
                       },
                     ),
