@@ -4,11 +4,13 @@ class CategoriesDetailPage extends StatelessWidget {
   final String title;
   final String description;
   final String imageUrl;
+  final String catdetail;
 
   CategoriesDetailPage({
     required this.title,
     required this.description,
     required this.imageUrl,
+    required this.catdetail,
   });
 
   @override
@@ -19,6 +21,7 @@ class CategoriesDetailPage extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
+          child: SingleChildScrollView(
           child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -30,12 +33,13 @@ class CategoriesDetailPage extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             Text(
-              description,
+                catdetail,
               style: const TextStyle(fontSize: 16),
             ),
           ],
         ),
       ),
+    ),
     );
   }
 }
